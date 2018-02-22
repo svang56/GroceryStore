@@ -23,16 +23,21 @@ int main()
   cout<<"\nYour choice (A/Q): ";
   cin>>input;
   
-  if((input == 'a' || input == 'A') && numItems < total)
+  if((input == 'a' || input == 'A'))
   {
     cout<<"What is the item?"<<endl;
     cin>>item;
+    if(numItems < total)
+    {
     list[numItems] = item;
-    if(numItems < max)
+    }
+
+    if(numItems < total)
     {
     numItems++;
     }
-    else
+
+   else
     {
     cout<<"You'll need a bigger list!";
     }

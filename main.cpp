@@ -39,7 +39,7 @@ int main()
 
    else
     {
-    cout<<"You'll need a bigger list!";
+    cout<<"You'll need a bigger list!\n";
     }
   } 
   

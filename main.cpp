@@ -1,17 +1,15 @@
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
-const int LISTSIZE = 5; //array of 5 strings
 int main()
 {
   int numItems = 0;
   char input;
   string item;
-  string list[LISTSIZE];
-  int max = LISTSIZE - 1;
-  int total = LISTSIZE;
-
+  vector<string> list; 
+  
 
   do
   {
@@ -25,30 +23,26 @@ int main()
   
   if((input == 'a' || input == 'A'))
   {
+    
     cout<<"What is the item?"<<endl;
     cin>>item;
-    if(numItems < total)
-    {
-    list[numItems] = item;
-    }
-
-    if(numItems < total)
-    {
+    list.push_back(item);
     numItems++;
-    }
 
-   else
-    {
-    cout<<"You'll need a bigger list!\n";
-    }
   } 
   
   }while( input != 'Q' && input != 'q');
-cout<<"==ITEMS TO BUY==\n";   
-    cout<<"1 "<<list[0]<<endl;
-    cout<<"2 "<<list[1]<<endl;
-    cout<<"3 "<<list[2]<<endl;
-    cout<<"4 "<<list[3]<<endl;
-    cout<<"5 "<<list[4]<<endl;
+    if(list.size() == 0)
+    {
+        cout<<"No items to buy!"<<endl;
+    }
+    if(numItems > 0)
+    {
+        for(int i = 0; i < list.size(); i++)
+        {
+            cout<<list[i]<<endl;
+        }
+    }
+
   return 0;
 }

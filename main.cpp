@@ -38,9 +38,12 @@ int main()
     }
     if(numItems > 0)
     {
+        int NumberList = 1;
+        cout<<"==ITEMS TO BUY=="<<endl;
         for(int i = 0; i < list.size(); i++)
         {
-            cout<<list[i]<<endl;
+            cout<<NumberList<<" "<<list[i]<<endl;
+            NumberList++;
         }
     }
 
